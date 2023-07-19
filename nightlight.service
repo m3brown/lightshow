@@ -1,0 +1,14 @@
+[Unit]
+Description=nightlight
+After=network.target
+
+[Service]
+ExecStart=/home/dietpi/nightlight.py
+WorkingDirectory=/home/dietpi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
